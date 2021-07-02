@@ -6,7 +6,7 @@ import '../buttons.dart';
 class RoundedUniformButton extends StatelessWidget {
   RoundedUniformButton(this.action);
 
-  final action;
+  final Function action;
 
   @override
   Widget build(BuildContext context) {
