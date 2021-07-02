@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "898983727327",
+    "project_id": "maths-and-vedas",
+    "storage_bucket": "maths-and-vedas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:898983727327:android:a129d2f15e84763ca3996a",
+        "android_client_info": {
+          "package_name": "com.example.hhw"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "898983727327-4e90fnrqgvjiuh5h0dkfl51tjk1afg1m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hhw",
+            "certificate_hash": "c14822fd7d77fc7a6d68641442afcca046f23085"
+          }
+        },
+        {
+          "client_id": "898983727327-hl1a06n5j8thcnsf065oacrpl10eaufl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBi8uBSbrgqXot-M_gHnPC_xyjovZN30hM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "898983727327-hl1a06n5j8thcnsf065oacrpl10eaufl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
