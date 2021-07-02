@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hhw/constants.dart';
-
 import '../buttons.dart';
 
 class RoundedUniformButton extends StatelessWidget {
@@ -13,11 +12,11 @@ class RoundedUniformButton extends StatelessWidget {
     return AspectRatio(
         aspectRatio: 1,
         child: UniformButton(
-          onPressed: action,
-           icon: Icon(
-          Icons.arrow_forward_ios_rounded,
-          size: 18,
-          color: kSubHeadTextStyle.color,
-        )));
+            onPressed: action,
+            icon: Icon(
+              Icons.arrow_forward_ios_rounded,
+              size: 18,
+              color: kSubHeadTextStyle.color,
+            )));
   }
 }
