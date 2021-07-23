@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_vibrate/flutter_vibrate.dart';
+import 'package:hhw/maharishi_pingalacharya.dart';
 import 'package:hhw/main.dart';
 import 'package:hhw/models/vedas_list.dart';
 import 'package:hhw/widgets/youtube_widget.dart';
@@ -56,6 +57,7 @@ class HomeScreen extends StatelessWidget {
                                     Iterable.generate(10, (r) {
                                   return Duration(milliseconds: 50);
                                 }));
+                                _showDaanav(context);
                               },
                               child: Stack(
                                 alignment: Alignment.centerRight,
@@ -105,10 +107,10 @@ class HomeScreen extends StatelessWidget {
                   child: Row(
                     children: [
                       SizedBox(width: 20),
-                      buildTopicButton(),
-                      buildTopicButton(),
-                      buildTopicButton(),
-                      buildTopicButton(),
+                      buildTopicButton(context),
+                      buildTopicButton(context),
+                      buildTopicButton(context),
+                      buildTopicButton(context),
                       SizedBox(width: 20),
                     ],
                   ),
@@ -168,6 +170,41 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  PersistentBottomSheetController<dynamic> _showDaanav(BuildContext context) {
+    return showBottomSheet(
+        context: context,
+        builder: (context) {
+          return GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: BottomSheet(
+                onClosing: () {
+                  Navigator.pop(context);
+                },
+                enableDrag: true,
+                backgroundColor: Colors.red,
+                builder: (_) => Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            SizedBox(
+                              width: MediaQuery.of(context).size.width,
+                              child: Image.asset(
+                                'assets/DAANAV.PNG',
+                                fit: BoxFit.fitWidth,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    )),
+          );
+        });
   }
 
   Widget _buildVedasScrollList(BuildContext context) {
@@ -250,22 +287,28 @@ class HomeScreen extends StatelessWidget {
                     color: Colors.black.withOpacity(0.1), fontSize: 18))));
   }
 
-  Widget buildTopicButton() {
-    return Container(
-      margin: EdgeInsets.symmetric(horizontal: 5),
-      padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-      decoration: BoxDecoration(
-          color: kMainAccentColor,
-          boxShadow: [
-            BoxShadow(
-                color: kMainAccentColor.withOpacity(0.6),
-                blurRadius: 20,
-                offset: Offset(0, 10))
-          ],
-          borderRadius: BorderRadius.circular(kBorderRadius)),
-      child: Text(
-        'Pascal\'s Triangle',
-        style: TextStyle(color: Colors.white.withOpacity(0.9), fontSize: 14),
+  Widget buildTopicButton(_) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+            _, MaterialPageRoute(builder: (_) => PingalaChhandSutrasScreen()));
+      },
+      child: Container(
+        margin: EdgeInsets.symmetric(horizontal: 5),
+        padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+        decoration: BoxDecoration(
+            color: kMainAccentColor,
+            boxShadow: [
+              BoxShadow(
+                  color: kMainAccentColor.withOpacity(0.6),
+                  blurRadius: 20,
+                  offset: Offset(0, 10))
+            ],
+            borderRadius: BorderRadius.circular(kBorderRadius)),
+        child: Text(
+          'Pascal\'s Triangle',
+          style: TextStyle(color: Colors.white.withOpacity(0.9), fontSize: 14),
+        ),
       ),
     );
   }

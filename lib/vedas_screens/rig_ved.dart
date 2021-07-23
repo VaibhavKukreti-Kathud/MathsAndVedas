@@ -5,6 +5,7 @@ import 'package:hhw/constants.dart';
 import 'package:hhw/creation_of_universe.dart';
 import 'package:hhw/maharishi_pingalacharya.dart';
 import 'package:hhw/widgets/data_tile.dart';
+import 'package:hhw/widgets/image_view.dart';
 import 'package:hhw/widgets/uniform_screens_temp.dart';
 
 class RigVedaScreen extends StatelessWidget {
@@ -66,15 +67,24 @@ class RigVedaScreen extends StatelessWidget {
               style: kDescTextStyle,
             ),
             SizedBox(height: 10),
-            Container(
-              height: 129,
-              margin: EdgeInsets.symmetric(vertical: 0),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(kBorderRadius),
-                color: Colors.white,
-                boxShadow: [kSubtleShadow],
-                image: DecorationImage(
-                    image: AssetImage('assets/pi.png'), fit: BoxFit.cover),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (_) =>
+                            IsolatedImageView(imagePath: 'assets/pi.png')));
+              },
+              child: Container(
+                height: 129,
+                margin: EdgeInsets.symmetric(vertical: 0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(kBorderRadius),
+                  color: Colors.white,
+                  boxShadow: [kSubtleShadow],
+                  image: DecorationImage(
+                      image: AssetImage('assets/pi.png'), fit: BoxFit.cover),
+                ),
               ),
             ),
             SizedBox(height: 10),
