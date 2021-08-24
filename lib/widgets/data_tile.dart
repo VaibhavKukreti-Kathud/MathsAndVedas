@@ -4,6 +4,7 @@ import '../constants.dart';
 Widget buildDataTile({required String title, required String description}) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
+    mainAxisSize: MainAxisSize.min,
     children: [
       Text(title,
           style: kSubHeadTextStyle.copyWith(

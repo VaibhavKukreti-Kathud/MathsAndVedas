@@ -142,7 +142,7 @@ CustomScrollView buildScrollDiscText(
                               ),
                               SizedBox(height: 10),
                               Text(
-                                'It includes the following topics',
+                                'Included Topics',
                                 style: kHeadTextStyle.copyWith(
                                     color: Colors.black.withOpacity(0.5),
                                     fontSize: 14),

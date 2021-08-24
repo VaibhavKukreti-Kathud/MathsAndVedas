@@ -185,23 +185,10 @@ class HomeScreen extends StatelessWidget {
                   Navigator.pop(context);
                 },
                 enableDrag: true,
-                backgroundColor: Colors.red,
+                backgroundColor: kMainAccentColor,
                 builder: (_) => Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            SizedBox(
-                              width: MediaQuery.of(context).size.width,
-                              child: Image.asset(
-                                'assets/DAANAV.PNG',
-                                fit: BoxFit.fitWidth,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
+                      children: [],
                     )),
           );
         });

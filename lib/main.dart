@@ -34,13 +34,13 @@ class _MyAppState extends State<MyApp> {
 }
 
 void vibrateMed() {
-  Platform.isIOS || Platform.isAndroid
-      ? Vibrate.feedback(FeedbackType.medium)
-      : null;
+  if (Platform.isIOS || Platform.isAndroid) {
+    Vibrate.feedback(FeedbackType.medium);
+  }
 }
 
 void vibrateTap() {
-  Platform.isIOS || Platform.isAndroid
-      ? Vibrate.feedback(FeedbackType.selection)
-      : null;
+  if (Platform.isIOS || Platform.isAndroid) {
+    Vibrate.feedback(FeedbackType.selection);
+  }
 }
