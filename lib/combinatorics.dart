@@ -1,12 +1,9 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:hhw/constants.dart';
-import 'package:hhw/vedas_screens/rig_ved.dart';
 import 'package:hhw/widgets/data_tile.dart';
 import 'package:hhw/widgets/image_view.dart';
 import 'package:hhw/widgets/info_page_temp.dart';
-import 'package:hhw/widgets/mantra_tile.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class CombinatoricsScreen extends StatelessWidget {
   const CombinatoricsScreen({Key? key}) : super(key: key);

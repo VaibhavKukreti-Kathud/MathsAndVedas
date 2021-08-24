@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hhw/vedas_screens/rig_ved.dart';
 import 'package:hhw/widgets/data_tile.dart';
 import 'package:hhw/widgets/image_view.dart';
 import 'package:hhw/widgets/mantra_tile.dart';
